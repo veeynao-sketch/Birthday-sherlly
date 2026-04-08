@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Celebration</title>
+    <title>Romantic Birthday Celebration</title>
+    <style>
+       body {
+           background: url('https://drive.google.com/uc?id=1-L1ukQXcrLv8bNKiPWwcsYQXlzCmLcoU') no-repeat center center fixed;
+           background-size: cover;
+       }
+       .sakura {
+           animation: fall 5s infinite;
+       }
+       @keyframes fall {
+           from { transform: translateY(0); } 
+           to { transform: translateY(100vh); } 
+       }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Birthday Celebration!</h1>
-    
-    <h2>Music</h2>
-    <p>Listen to our playlist:</p>
-    <ul>
-        <li><a href="LINK_TO_MUSIC">Music Track 1</a></li>
-        <li><a href="LINK_TO_MUSIC">Music Track 2</a></li>
-        <li><a href="LINK_TO_MUSIC">Music Track 3</a></li>
-    </ul>
-
-    <h2>Photos</h2>
-    <p>Check out our album:</p>
-    <ul>
-        <li><a href="LINK_TO_PHOTO">Photo 1</a></li>
-        <li><a href="LINK_TO_PHOTO">Photo 2</a></li>
-        <li><a href="LINK_TO_PHOTO">Photo 3</a></li>
-    </ul>
-
-    <h2>Video</h2>
-    <p>Watch our special moments:</p>
-    <ul>
-        <li><a href="LINK_TO_VIDEO">Video 1</a></li>
-        <li><a href="LINK_TO_VIDEO">Video 2</a></li>
-    </ul>
-
-    <h2>Voice Message</h2>
-    <p>Listen to our voice message:</p>
-    <ul>
-        <li><a href="LINK_TO_VOICE_MESSAGE">Voice Message</a></li>
-    </ul>
+    <h1 style="text-align: center; color: white;">Happy Birthday!</h1>
+    <div style="text-align: center;">
+        <video controls>
+            <source src="https://drive.google.com/uc?id=1q62-B0QzoMgehwol4jWjoTcuq8l2lcZY" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <audio controls autoplay loop>
+        <source src="https://drive.google.com/uc?id=1qSZk_pG6yts_t2BNOGvXvxk6u2HFPEvy">
+        Your browser does not support the audio tag.
+    </audio>
+    <img src="https://drive.google.com/uc?id=1-L1ukQXcrLv8bNKiPWwcsYQXlzCmLcoU" alt="Birthday Photo 1" style="width: 300px; display: block; margin: auto;">
+    <img src="https://drive.google.com/uc?id=1JDZHQec8d5OKmbRgKO43aRjePNeJVIgw" alt="Birthday Photo 2" style="width: 300px; display: block; margin: auto;">
+    <audio controls>
+        <source src="https://drive.google.com/uc?id=1pop9g59kMj5wtSnTcSjY6KJddVk3UEoS">
+        Your browser does not support the audio tag.
+    </audio>
+    <div class="sakura"></div>
 </body>
 </html>
