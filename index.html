@@ -3,39 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romantic Birthday Celebration</title>
+    <title>Birthday Sherlly</title>
     <style>
-       body {
-           background: url('https://drive.google.com/uc?id=1-L1ukQXcrLv8bNKiPWwcsYQXlzCmLcoU') no-repeat center center fixed;
-           background-size: cover;
-       }
-       .sakura {
-           animation: fall 5s infinite;
-       }
-       @keyframes fall {
-           from { transform: translateY(0); } 
-           to { transform: translateY(100vh); } 
-       }
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, #FFB6C1, #DA70D6);
+            overflow: hidden;
+        }
+        #falling-petals {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .petal {
+            position: absolute;
+            opacity: 0.5;
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(0); } 
+            100% { transform: translateY(100vh); }
+        }
     </style>
 </head>
 <body>
-    <h1 style="text-align: center; color: white;">Happy Birthday!</h1>
-    <div style="text-align: center;">
-        <video controls>
-            <source src="https://drive.google.com/uc?id=1q62-B0QzoMgehwol4jWjoTcuq8l2lcZY" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    <audio controls autoplay loop>
-        <source src="https://drive.google.com/uc?id=1qSZk_pG6yts_t2BNOGvXvxk6u2HFPEvy">
-        Your browser does not support the audio tag.
-    </audio>
-    <img src="https://drive.google.com/uc?id=1-L1ukQXcrLv8bNKiPWwcsYQXlzCmLcoU" alt="Birthday Photo 1" style="width: 300px; display: block; margin: auto;">
-    <img src="https://drive.google.com/uc?id=1JDZHQec8d5OKmbRgKO43aRjePNeJVIgw" alt="Birthday Photo 2" style="width: 300px; display: block; margin: auto;">
+    <div id="falling-petals"></div>
+    <h1>Happy Birthday Sherlly!</h1>
+    <img src="https://drive.google.com/uc?export=download&id=1-L1ukQXcrLv8bNKiPWwcsYQXlzCmLcoU" alt="Image 1" />
+    <img src="https://drive.google.com/uc?export=download&id=1JDZHQec8d5OKmbRgKO43aRjePNeJVIgw" alt="Image 2" />
+    <video controls>
+        <source src="https://drive.google.com/uc?export=download&id=1q62-B0QzoMgehwol4jWjoTcuq8l2lcZY" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <audio controls>
-        <source src="https://drive.google.com/uc?id=1pop9g59kMj5wtSnTcSjY6KJddVk3UEoS">
+        <source src="https://drive.google.com/uc?export=download&id=1qSZk_pG6yts_t2BNOGvXvxk6u2HFPEvy" type="audio/mpeg">
         Your browser does not support the audio tag.
     </audio>
-    <div class="sakura"></div>
+    <audio controls>
+        <source src="https://drive.google.com/uc?export=download&id=1pop9g59kMj5wtSnTcSjY6KJddVk3UEoS" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    <script>
+        const petalContainer = document.getElementById('falling-petals');
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.backgroundImage = 'url(path/to/sakura.png)'; // Adjust the image path
+            petal.style.width = '20px';
+            petal.style.height = '20px';
+            petal.style.transform = 'rotate(' + Math.random() * 360 + 'deg)';
+            petalContainer.appendChild(petal);
+            setTimeout(() => {
+                petal.remove();
+            }, 5000);
+        }
+        setInterval(createPetal, 200);
+    </script>
 </body>
 </html>
